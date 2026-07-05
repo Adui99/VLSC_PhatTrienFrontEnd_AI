@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tạo form đăng ký sự kiện</title>
+</head>
+
+<body>
+    <h1>FORM ĐĂNG KÝ THAM GIA SỰ KIỆN</h1>
+    <form>
+        <table>
+            <tr>
+                <td><label for="name">Họ tên:</label></td>
+                <td><input type="text" id="name" name="name" placeholder="Nhập họ tên"></td>
+            </tr>
+            <tr>
+                <td><label for="email">Email:</label></td>
+                <td><input type="email" id="email" placeholder="Nhập email"></td>
+            </tr>
+            <tr>
+                <td><label for="jtime">Thời gian tham gia:</label></td>
+                <td><input type="datetime-local" id="jtime" name="jtime"></td>
+            </tr>
+            <tr>
+                <td><label for="gender">Giới tính:</label></td>
+                <td><input type="radio" id="male" name="gender" value="male"><label for="male">Nam</label>
+                    <input type="radio" id="female" name="gender" value="female"><label for="female">Nữ</label>
+                    <input type="radio" id="other" name="gender" value="other"><label for="other">Khác</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="reset" value="reset">
+                    <input type="submit" value="submit">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>
