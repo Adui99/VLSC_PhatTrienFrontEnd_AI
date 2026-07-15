@@ -10,104 +10,129 @@
     body {
         font-family: sans-serif;
         font-size: 20px;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
     }
 
     .card {
-        width: 500px;
+        width: 350px;
         margin: 50px auto;
-        padding: 5px;
-        border: 4px;
-        border-radius: 20px;
-        background-color: lightblue;
+        padding: 24px;
+        border: 2px solid #65DCD5;
+        border-radius: 20px;        
+        background-color: #D9FFF4;
+        
     }
 
     .avatar img {
-        width: 200px;
-        height: 200px;
-        border-radius: 50%;
-        margin: 10px 10px 10px 75px;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;        
+        border: 4px solid #65DCD5;
+        display: block;
+        margin: 0 auto 15px;
+        object-fit: cover;
     }
 
     .name {
-        color: black;
+        color: #43637E;
         font-weight: 700;
         font-size: 25px;
+        text-transform: uppercase;
+        margin-bottom: 8px;
     }
 
     .job {
-        color: green;
+        color: #0ed31e;
+        margin-bottom: 8px;
+
     }
 
-    .bio {}
+    .bio {
+        color: #43637E;
+        font-size: 16px;
+        line-height: 1.5;
+        margin-bottom: 16px;
+    }
 
-    .skill {
+    .skill-title {            
+        font-weight: 700;
+        color: #43637E;
+        margin-bottom: 16px; 
+    }
+    ul{
         list-style: none;
+        padding: 0;
+        margin-bottom: 24px;
+        text-align: center;
+    }
+    .skill {
         display: inline-block;
-        font-size: 20px;
-        padding: 10px;
+        font-size: 16px;
+        color: #321E48;
+        border-radius: 10px;
+        margin: 4px;
     }
 
     .skill1 {
         background-color: aqua;
-        padding: 10px;
-        border-radius: 10px;
+        padding: 5px;        
         margin: 2px;
     }
 
     .skill2 {
         background-color: #0ed31e;
-        padding: 10px;
-        border-radius: 10px;
+        padding: 5px;       
         margin: 2px;
     }
 
     .skill3 {
-        background-color: #bec926;
-        padding: 10px;
-        border-radius: 10px;
+        background-color: #e3ec62;
+        padding: 5px;       
         margin: 2px;
     }
 
     .contact {
-        display: inline-block;
-        text-decoration: name;
-        border: 2px solid #e01f70;
+        display: block;
+        width: fit-content;
+        text-decoration: none;
+        border: 2px solid #321E48;
         padding: 8px 16px;
         border-radius: 20px;
         font-weight: 700;
-        color: #e01f70;
-        margin: 0px 0px 0px 20px;
+        color: #321E48;       
         transition: ease 0.2s;
+        margin: 16px auto 0;
     }
 
     .contact:hover {
-        color: #e01f70;
-        background: #000;
+        color: #fff;
+        background: #321E48;
     }
 </style>
 
 <body>
     <div class="card">
-        <div class="avatar">
-            <a href=""><img
-                    src="https://png.pngtree.com/png-vector/20191101/ourmid/pngtree-cartoon-color-simple-male-avatar-png-image_1934459.jpg"
+         
+            <a class="avatar" href=""><img
+                    src="https://cdn.displate.com/artwork/270x380/2024-11-07/b53753a0-2d8c-4bed-a5ec-a9ca96c47008.jpg"
                     alt="">
             </a>
-            <h2 class="name">Hoang Khuong Duy</h2>
-        </div>
-        <div>
+
+            <h2 class="name">Hoang Khuong Duy</h2>    
+        
             <p class="info job">Student</p>
             <p class="info bio">Xin chao! Toi la Duy den tu VLSC. Rat vui duoc gap cac ban</p>
-            <p class="info skill">Ky nang</p>
+            <p class="info skill-title">Ky nang</p>
             <ul>
                 <li class="skill skill1">Ngoai ngu</li>
                 <li class="skill skill2">Giao tiep</li>
                 <li class="skill skill3">Quan ly</li>
-            </ul>
-        </div>
-        <div>
+            </ul>        
+        
             <a class="contact" href="https://www.google.com">LIEN HE</a>
-        </div>
+        
     </div>
 
 </body>
