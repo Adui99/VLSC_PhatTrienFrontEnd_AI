@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MENU CAFE</title>
+</head>
+<body>
+    <div class="menu">
+        <h1 class="title">ADUI'S CAFÉ</h1>
+        <ul>
+            <li class="drink drink1">Black Coffee: <span class="price">18,000 VND</span></li>
+            <li class="drink drink2">Milk Coffee: <span class="price">20,000 VND</span></li>
+            <li class="drink drink3">Lemon Tea: <span class="price">15,000 VND</span></li>
+            <li class="drink drink4">Green Tea: <span class="price">15,000 VND</span></li>
+            <li class="drink drink5">Matcha Latte: <span class="price">25,000 VND</span></li>
+        </ul>
+        <a class="order" href="https://www.phuclong.com.vn/">ĐẶT NGAY</a>
+    </div>
+</body>
+
+<style>
+    body{
+        font-family: sans-serif;
+        font-size: 20px;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+    }
+    .menu {
+        width: 500px;
+        margin: 50px auto;
+        padding: 24px;
+        border: 4px solid #31807c;
+        border-radius: 20px;
+        /* background-color: #d3edf1; */
+        background-image: linear-gradient(to bottom, #eafdff 0%, #b2e3e1 100%);
+    }
+    .title{
+        color:#0e4643;        
+        /* background-color: #d3edf1; */
+        text-align: center;
+        padding: 10px;  
+        width: fit-content;
+        margin: 24px auto;
+    }
+    ul{
+        list-style-type: none;
+        padding: 10px;
+    }
+    .drink {
+        color: #20746f;
+        margin-bottom: 8px;
+        font-weight: 700;
+        padding: 8px;        
+    }
+    .price {
+        color: #54b11f;
+        font-weight: bold;
+    }
+    .order {
+        display: block;
+        width: 200px;
+        margin: 20px auto;
+        padding: 10px;
+        text-align: center;
+        background-color: #31807c;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 8px;
+    }
+    .order:hover {
+        background-color: #2a6b63;
+    }
+</style>
+
+</html>
