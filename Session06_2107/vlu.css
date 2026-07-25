@@ -1,0 +1,73 @@
+/*reset trinh duyet ve default*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #ccc;
+    padding: 18px 80px;
+    align-items: center;
+}
+
+.nav-links ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+    font-weight: 600;
+    transition: ease 0.25s;
+    /* border: 1px solid #ccc; */
+    padding: 8px 20px;
+}
+
+.nav-links ul li {
+    list-style: none;
+}
+
+.nav-links ul {
+    display: flex;
+    /* gap: 20px; */
+}
+
+.nav-links ul li a:hover {
+    color: red;
+    text-decoration: none;
+}
+
+.project {
+    display: flex;
+    gap: 20px;
+}
+
+.item-project {
+    width: 33.33%;
+}
+
+.item-project img {
+    width: 100%;
+    border-radius: 20px;
+    display: block;
+}
+
+section {
+    max-width: 1200px;
+    padding: 0 40px;
+    margin: 40px auto;
+}
+
+.description {
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.description:hover {
+    color: blue;
+}
+
+.item-project img:hover {
+    transform: scale(1.05);
+    transition: ease 0.25s;
+}
