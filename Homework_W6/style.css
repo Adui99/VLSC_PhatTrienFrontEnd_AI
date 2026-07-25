@@ -1,0 +1,208 @@
+/* ==================== 1. GENERAL STYLES ==================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #fcfcfc;
+    color: #222;
+    line-height: 1.6;
+}
+
+/* ==================== 2. HEADER COMPONENT ==================== */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 25px 80px;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.logo a {
+    font-size: 24px;
+    font-weight: 700;
+    color: #111;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+.nav-links ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-links ul li a {
+    text-decoration: none;
+    color: #555;
+    font-size: 16px;
+    font-weight: 600;
+    /* text-transform: uppercase; */
+    padding: 8px 16px;
+    transition: all 0.25s ease;
+}
+
+.nav-links ul li a:hover {
+    color: #c6a052;
+}
+
+/* ==================== 3. CONTENT COMPONENT ==================== */
+.main-content {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 40px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 26px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* .section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 2px;
+    background-color: #c6a052;
+} */
+
+.project-grid {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+}
+
+.item-project {
+    width: 33.33%;
+    background-color: #ffffff;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.25s ease;
+}
+
+.item-project:hover {
+    transform: translateY(-5px);
+}
+
+.item-project img {
+    width: 100%;
+    height: 300px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 22px 18px;
+    text-align: center;
+}
+
+.card-title {
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+    color: #111;
+    font-weight: 600;
+}
+
+.description {
+    font-size: 13.5px;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* ==================== 4. FOOTER COMPONENT ==================== */
+.site-footer {
+    background-color: #111111;
+    color: #ffffff;
+    padding: 60px 80px 30px 80px;
+    margin-top: 60px;
+    border-top: 4px solid #c6a052;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.site-footer h3 {
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 24px;
+    color: #c6a052;
+    font-weight: 600;
+}
+
+.footer-brand {
+    flex: 1.5;
+    min-width: 240px;
+}
+
+.footer-brand p {
+    color: #999;
+    font-size: 14px;
+}
+
+.footer-links {
+    flex: 1;
+    min-width: 180px;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links ul li {
+    margin-bottom: 12px;
+}
+
+.footer-links ul li a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.25s ease, padding-left 0.25s ease;
+}
+
+.footer-links ul li a:hover {
+    color: #c6a052;
+    padding-left: 4px;
+}
+
+.footer-info {
+    flex: 1.2;
+    min-width: 220px;
+}
+
+.footer-info p {
+    margin-bottom: 14px;
+    font-size: 14px;
+    color: #ccc;
+    display: flex;
+    align-items: center;
+}
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 40px auto 0 auto;
+    padding-top: 25px;
+    border-top: 1px solid #222;
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    color: #666;
+}
