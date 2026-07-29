@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiem tra chan le</title>
+</head>
+
+<body>
+    <h2>Chuong trinh kiem tra chan le</h2>
+    <label>Nhap vao 1 so nguyen duong</label>
+    <input type="number" id="number">
+    <br>
+    <button onclick="checkNumber()">CHECK</button>
+    <p id="result"></p>
+
+    <script>
+        function checkNumber() {
+            let number = document.getElementById("number").value;
+            if (number < 0) {
+                alert("Vui long nhap so duong");
+            }
+            if (number % 2 == 0) {
+                document.getElementById("result").innerHTML = number + " la so chan";
+            } else {
+                document.getElementById("result").innerHTML = number + " la so le";
+            }
+        }
+    </script>
+</body>
+
+</html>

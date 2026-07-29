@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xem Boi Tinh Yeu</title>
+</head>
+
+<body>
+    <h2>Love Calculate</h2>
+    <label for="">Your name :</label>
+    <input type="text" id="yourName">
+    <br>
+    <label for="">Crush's name :</label>
+    <input type="text" id="crushName">
+    <br>
+    <button onclick="calculateLove()">Calculate</button>
+    <p id="result"></p>
+
+    <script>
+        function calculateLove() {
+            let yourName = document.getElementById("yourName").value;
+            let crushName = document.getElementById("crushName").value;
+            let score = Math.floor(Math.random() * 100) + 1;
+            if (score >= 50) {
+                document.getElementById("result").innerHTML = yourName + " <3 " + crushName + " Love score " + score + "% Match";
+
+            }
+            else {
+                document.getElementById("result").innerHTML = yourName + " <3 " + crushName + " Love score " + score + "% Unmatch";
+
+            }
+        }
+    </script>
+</body>
+
+</html>

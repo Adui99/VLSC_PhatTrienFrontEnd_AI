@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xep Loai Hoc Luc</title>
+</head>
+
+<body>
+    <h2>Chuong trinh xep loai hoc luc</h2>
+    <label>Nhap vao diem cua ban</label>
+    <input type="number" id="score">
+    <button onclick="scoreRank()">CHECK</button>
+    <p id="result"></p>
+    <script>
+        function scoreRank() {
+            let score = document.getElementById("score").value;
+            if (score < 0 || score > 100) {
+                alert("Vui long nhap diem tu 0 den 100");
+            }
+            if (score >= 90) {
+                document.getElementById("result").innerHTML = "A";
+            }
+            else if (score >= 80) {
+                document.getElementById("result").innerHTML = "B";
+            }
+            else if (score >= 70) {
+                document.getElementById("result").innerHTML = "C";
+            }
+            else if (score >= 60) {
+                document.getElementById("result").innerHTML = "D";
+            }
+            else {
+                document.getElementById("result").innerHTML = "F";
+            }
+        }
+    </script>
+</body>
+
+</html>
