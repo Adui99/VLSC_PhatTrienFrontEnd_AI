@@ -1,0 +1,435 @@
+/* ==================== 1. GENERAL STYLES ==================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #0b0f17;
+    color: #f3f4f6;
+    line-height: 1.6;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 60px;
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    position: relative;
+    padding-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 4px;
+    background-color: #d97706;
+    border-radius: 2px;
+}
+
+/* ==================== 2. HEADER COMPONENT (Flexbox) ==================== */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(11, 15, 23, 0.85);
+    padding: 20px 80px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+}
+
+.logo a {
+    font-size: 22px;
+    font-weight: 800;
+    color: #ffffff;
+    text-decoration: none;
+    letter-spacing: 1.5px;
+}
+
+.logo a span {
+    color: #f59e0b;
+}
+
+.nav-links ul {
+    display: flex;
+    list-style: none;
+    gap: 24px;
+}
+
+.nav-links ul li a {
+    text-decoration: none;
+    color: #9ca3af;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 8px 12px;
+    transition: color 0.3s ease;
+}
+
+.nav-links ul li a:hover {
+    color: #f59e0b;
+}
+
+/* ==================== 3. BANNER COMPONENT (Flexbox) ==================== */
+.banner-section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: radial-gradient(circle at center, #2d1a04 0%, #0b0f17 100%);
+    padding: 0 24px;
+}
+
+.badge {
+    display: inline-block;
+    background-color: rgba(245, 158, 11, 0.1);
+    color: #fbbf24;
+    border: 1px solid rgba(245, 158, 11, 0.2);
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.banner-content h1 {
+    font-size: 54px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 25px;
+    letter-spacing: -1px;
+}
+
+.banner-content h1 span {
+    background: linear-gradient(to right, #f59e0b, #d97706);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.banner-content p {
+    font-size: 18px;
+    color: #9ca3af;
+    max-width: 650px;
+    margin: 0 auto 35px auto;
+}
+
+.btn-primary {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #d97706;
+    color: #ffffff;
+    padding: 14px 35px;
+    font-weight: 700;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(217, 119, 6, 0.3);
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #b45309;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 25px rgba(217, 119, 6, 0.4);
+}
+
+/* ==================== 4. ABOUT COMPONENT (Flexbox) ==================== */
+.about-section {
+    max-width: 950px;
+    margin: 120px auto;
+    padding: 0 40px;
+}
+
+.about-container {
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(145deg, #111827, #1f2937);
+    padding: 50px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.about-text {
+    font-size: 18px;
+    color: #d1d5db;
+    text-align: center;
+    max-width: 780px;
+    line-height: 1.8;
+}
+
+/* ==================== 5. SKILLS COMPONENT (CSS Grid) ==================== */
+.skills-section {
+    max-width: 1200px;
+    margin: 120px auto;
+    padding: 0 40px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.skill-card {
+    background-color: #111827;
+    padding: 40px 30px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(245, 158, 11, 0.4);
+    box-shadow: 0 12px 24px rgba(245, 158, 11, 0.03);
+}
+
+.skill-icon {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.skill-card h3 {
+    font-size: 20px;
+    color: #ffffff;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.skill-card p {
+    font-size: 14.5px;
+    color: #9ca3af;
+}
+
+/* ==================== 6. PROJECTS COMPONENT (CSS Grid) ==================== */
+.projects-section {
+    max-width: 1200px;
+    margin: 120px auto;
+    padding: 0 40px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+
+.project-card {
+    background-color: #111827;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(245, 158, 11, 0.3);
+}
+
+.project-img {
+    overflow: hidden;
+    position: relative;
+}
+
+.project-img img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.project-card:hover .project-img img {
+    transform: scale(1.04);
+}
+
+.project-info {
+    padding: 30px;
+}
+
+.project-tag {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    color: #fbbf24;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.project-info h3 {
+    font-size: 22px;
+    color: #ffffff;
+    margin-bottom: 12px;
+}
+
+.project-info p {
+    font-size: 15px;
+    color: #9ca3af;
+    margin-bottom: 25px;
+    height: 45px;
+}
+
+.btn-link {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 15px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.btn-link:hover {
+    color: #fbbf24;
+}
+
+/* ==================== 7. CONTACT COMPONENT (Flexbox) ==================== */
+.contact-section {
+    max-width: 1200px;
+    margin: 120px auto;
+    padding: 0 40px;
+}
+
+.contact-container {
+    display: flex;
+    gap: 60px;
+    background-color: #111827;
+    padding: 50px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.contact-info,
+.contact-form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-info h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.contact-info p {
+    margin-bottom: 18px;
+    color: #9ca3af;
+}
+
+.contact-info strong {
+    color: #e5e7eb;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 14px 18px;
+    margin-bottom: 20px;
+    background-color: #0b0f17;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 15px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #f59e0b;
+}
+
+.contact-form textarea {
+    resize: none;
+}
+
+.btn-submit {
+    align-self: flex-start;
+    padding: 14px 40px;
+    background-color: #d97706;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(217, 119, 6, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: #b45309;
+    transform: translateY(-2px);
+}
+
+/* ==================== 8. FOOTER COMPONENT (Flexbox) ==================== */
+.site-footer {
+    background-color: #070a10;
+    padding: 40px 24px;
+    border-top: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1120px;
+    margin: 0 auto;
+    font-size: 14px;
+    color: #4b5563;
+}
+
+/* ==================== 9. RESPONSIVE COMPONENT ==================== */
+@media (max-width: 992px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .site-header {
+        padding: 20px 30px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .banner-content h1 {
+        font-size: 38px;
+    }
+
+    .contact-container {
+        flex-direction: column;
+        gap: 40px;
+        padding: 35px 25px;
+    }
+
+    .btn-submit {
+        align-self: stretch;
+        text-align: center;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        text-align: center;
+    }
+}
