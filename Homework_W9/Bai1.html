@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 1 - Đổi màu nền</title>
+</head>
+
+<body id="main-body">
+
+    <h1>Bài 1. Đổi màu nền</h1>
+    <p>Nhấn vào các nút bên dưới để thay đổi màu nền của trang web.</p>
+
+    <div>
+        <button onclick="changeBackgroundColor('#ffffff')">Mặc định (Trắng)</button>
+        <button onclick="changeBackgroundColor('#d97706')">Vàng Amber</button>
+        <button onclick="changeBackgroundColor('#0d9488')">Xanh Teal</button>
+        <button onclick="changeBackgroundColor('#e11d48')">Đỏ Rose</button>
+    </div>
+
+    <script>
+        function changeBackgroundColor(colorCode) {
+            document.getElementById('main-body').style.backgroundColor = colorCode;
+        }
+    </script>
+</body>
+
+</html>

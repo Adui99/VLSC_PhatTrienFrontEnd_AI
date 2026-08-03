@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 2 - Đếm ký tự và từ</title>
+</head>
+
+<body>
+
+    <h1>Bài 2. Đếm ký tự và từ</h1>
+    <textarea id="text-input" placeholder="Nhập hoặc dán đoạn văn bản vào đây..." rows="5" cols="50"
+        oninput="countText()"></textarea>
+
+    <div>
+        <p>Số ký tự: <span id="char-count">0</span></p>
+        <p>Số từ: <span id="word-count">0</span></p>
+    </div>
+
+    <script>
+        function countText() {
+            const text = document.getElementById('text-input').value;
+
+            // 1. Đếm số ký tự
+            const charCount = text.length;
+            document.getElementById('char-count').innerText = charCount;
+
+            // 2. Đếm số từ
+            const trimmedText = text.trim();
+            let wordCount = 0;
+
+            if (trimmedText !== "") {
+                wordCount = trimmedText.split(/\s+/).length; //tach van ban thanh mang cac tu, Regex
+            }
+
+            document.getElementById('word-count').innerText = wordCount;
+        }
+    </script>
+</body>
+
+</html>

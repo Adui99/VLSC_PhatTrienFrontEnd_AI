@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 3 - Xác thực mật khẩu</title>
+</head>
+
+<body>
+
+    <h1>Bài 3. Xác thực mật khẩu</h1>
+
+    <div>
+        <p>
+            <label for="password">Nhập mật khẩu:</label><br>
+            <input type="password" id="password" placeholder="Nhập mật khẩu lần đầu">
+        </p>
+
+        <p>
+            <label for="confirm-password">Nhập lại mật khẩu:</label><br>
+            <input type="password" id="confirm-password" placeholder="Nhập lại mật khẩu để kiểm tra">
+        </p>
+
+        <button onclick="verifyPassword()">Kiểm tra</button>
+    </div>
+
+    <div id="result-message" style="margin-top: 15px; font-weight: bold;"></div>
+
+    <script>
+        function verifyPassword() {
+            // Lấy dữ liệu từ 2 ô nhập liệu
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirm-password').value;
+            const resultDiv = document.getElementById('result-message');
+
+            // Kiểm tra nếu một trong hai ô để trống
+            if (password === "" || confirmPassword === "") {
+                resultDiv.innerText = "Vui lòng nhập đầy đủ mật khẩu ở cả 2 ô!";
+                resultDiv.style.color = "orange";
+                return;
+            }
+
+            // Kiểm tra điều kiện trùng khớp
+            if (password === confirmPassword) {
+                // Hiển thị thông báo đúng
+                resultDiv.innerText = "Xác thực thành công! Mật khẩu trùng khớp.";
+                resultDiv.style.color = "green";
+            } else {
+                // Hiển thị thông báo sai và yêu cầu nhập lại
+                resultDiv.innerText = "Mật khẩu không trùng khớp! Vui lòng kiểm tra và nhập lại.";
+                resultDiv.style.color = "red";
+
+                // Tự động xóa dữ liệu ô nhập lại và focus để người dùng tiện gõ lại
+                document.getElementById('confirm-password').value = "";
+                document.getElementById('confirm-password').focus();
+            }
+        }
+    </script>
+</body>
+
+</html>
