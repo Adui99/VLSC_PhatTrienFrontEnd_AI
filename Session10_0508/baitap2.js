@@ -1,0 +1,15 @@
+// Bài tập 2: Viết hàm sumOddNumbers nhận vào một mảng số và trả về tổng của tất cả các số lẻ trong mảng đó sử dụng vòng lặp for.
+// // Sample usage
+// print  (sumOddNumbers([1,2, 3, 4, 5])); // 9
+
+function sumOddNumbers(arr) {
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] % 2 != 0) {
+            sum += arr[i];
+        }
+    }
+    return sum;
+}
+
+console.log(sumOddNumbers([1, 2, 3, 4, 5])); // 9
